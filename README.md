@@ -1,51 +1,117 @@
-# @ant-design/cssinjs
+### react-slick
 
-[![NPM version][npm-image]][npm-url]
-[![npm download][download-image]][download-url]
-[![dumi](https://img.shields.io/badge/docs%20by-dumi-blue?style=flat-square)](https://github.com/umijs/dumi)
-[![build status][github-actions-image]][github-actions-url]
-[![Codecov][codecov-image]][codecov-url]
-[![Dependencies][david-image]][david-url]
-[![DevDependencies][david-dev-image]][david-dev-url]
-[![bundle size][bundlephobia-image]][bundlephobia-url]
+[![Backers on Open Collective](https://opencollective.com/react-slick/backers/badge.svg)](#backers) [![Sponsors on Open Collective](https://opencollective.com/react-slick/sponsors/badge.svg)](#sponsors)
 
-[npm-image]: http://img.shields.io/npm/v/@ant-design/cssinjs.svg?style=flat-square
-[npm-url]: http://npmjs.org/package/@ant-design/cssinjs
-[github-actions-image]: https://github.com/ant-design/cssinjs/workflows/CI/badge.svg
-[github-actions-url]: https://github.com/ant-design/cssinjs/actions
-[codecov-image]: https://img.shields.io/codecov/c/github/ant-design/cssinjs/master.svg?style=flat-square
-[codecov-url]: https://codecov.io/gh/ant-design/cssinjs/branch/master
-[david-url]: https://david-dm.org/ant-design/cssinjs
-[david-image]: https://david-dm.org/ant-design/cssinjs/status.svg?style=flat-square
-[david-dev-url]: https://david-dm.org/ant-design/cssinjs?type=dev
-[david-dev-image]: https://david-dm.org/ant-design/cssinjs/dev-status.svg?style=flat-square
-[download-image]: https://img.shields.io/npm/dm/@ant-design/cssinjs.svg?style=flat-square
-[download-url]: https://npmjs.org/package/@ant-design/cssinjs
-[bundlephobia-url]: https://bundlephobia.com/result?p=@ant-design/cssinjs
-[bundlephobia-image]: https://badgen.net/bundlephobia/minzip/@ant-design/cssinjs
+##### Carousel component built with React. It is a react port of [slick carousel](http://kenwheeler.github.io/slick/)
 
-Component level cssinjs solution used in [ant.design](https://ant.design).
-It's a subset of [Emotion](https://emotion.sh/) with design token logic wrapper. Please feel free to use emotion directly if you want to find a web cssinjs solution. cssinjs related dep packages:
+## [Documentation](http://react-slick.neostack.com)
 
-- stylis
-- @emotion/hash
-- @emotion/unitless
+### Installation
 
-## Live Demo
+**npm**
 
-https://cssinjs.vercel.app/
-
-## Install
-
-[![@ant-design/cssinjs](https://nodei.co/npm/@ant-design/cssinjs.png)](https://npmjs.org/package/@ant-design/cssinjs)
-
-## Development
-
+```bash
+npm install react-slick --save
 ```
+
+**yarn**
+
+```bash
+yarn add react-slick
+```
+
+**Also install slick-carousel for css and font**
+
+```bash
+npm install slick-carousel
+
+// Import css files
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+```
+
+or add cdn link in your html
+
+```html
+<link
+  rel="stylesheet"
+  type="text/css"
+  charset="UTF-8"
+  href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css"
+/>
+<link
+  rel="stylesheet"
+  type="text/css"
+  href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css"
+/>
+```
+
+### [PlayGround](https://codesandbox.io/s/ppwkk5l6xx)
+
+### Example
+
+```js
+import React from "react";
+import Slider from "react-slick";
+
+export default function SimpleSlider() {
+  var settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1
+  };
+  return (
+    <Slider {...settings}>
+      <div>
+        <h3>1</h3>
+      </div>
+      <div>
+        <h3>2</h3>
+      </div>
+      <div>
+        <h3>3</h3>
+      </div>
+      <div>
+        <h3>4</h3>
+      </div>
+      <div>
+        <h3>5</h3>
+      </div>
+      <div>
+        <h3>6</h3>
+      </div>
+    </Slider>
+  );
+}
+```
+
+### Props
+
+For all available props, go [here](https://react-slick.neostack.com/docs/api/).
+
+### Methods
+
+For all available methods, go [here](https://react-slick.neostack.com/docs/api#methods)
+
+### Development
+
+Want to run demos locally
+
+```bash
+git clone https://github.com/akiran/react-slick
+cd react-slick
 npm install
 npm start
+open http://localhost:8080
 ```
 
-## License
+## Community
 
-@ant-design/cssinjs is released under the MIT license.
+Join our [discord channel](https://discord.gg/z7stRE4Cyb) to discuss react-slick bugs and ask for help
+
+
+## Contributing
+
+Please see the [contributing guidelines](./CONTRIBUTING.md)
