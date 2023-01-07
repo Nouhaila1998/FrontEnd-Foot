@@ -1,1 +1,4 @@
-export default function murmurhash2_32_gc(str: string): string
+declare function arrayTreeFilter<T>(data: T[], filterFn: (item: T, level: number) => boolean, options?: {
+    childrenKeyName?: string;
+}): T[];
+export default arrayTreeFilter;
