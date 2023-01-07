@@ -1,29 +1,48 @@
 {
-  "name": "array-tree-filter",
-  "version": "2.1.0",
-  "description": "filter in array tree",
-  "main": "lib/index.js",
-  "scripts": {
-    "test": "npm run build && tape test/*.js",
-    "pub": "npm run build && npm publish",
-    "tsc": "tsc",
-    "build": "npm run tsc && rollup index.js --output.format umd --name 'arrayTreeFilter' --output.file lib/index.js"
+  "name": "async-validator",
+  "description": "validate form asynchronous",
+  "version": "4.2.5",
+  "license": "MIT",
+  "files": [
+    "dist-*/",
+    "bin/"
+  ],
+  "pika": true,
+  "sideEffects": false,
+  "keywords": [
+    "validator",
+    "validate",
+    "async"
+  ],
+  "homepage": "https://github.com/yiminghe/async-validator",
+  "bugs": {
+    "url": "https://github.com/yiminghe/async-validator/issues"
   },
-  "files": ["lib", "index.d.ts"],
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/afc163/array-tree-filter.git"
+    "url": "git@github.com:yiminghe/async-validator.git"
   },
-  "keywords": ["array", "tree", "filter"],
-  "author": "afc163 <afc163@gmail.com>",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/afc163/array-tree-filter/issues"
-  },
-  "homepage": "https://github.com/afc163/array-tree-filter#readme",
+  "dependencies": {},
   "devDependencies": {
-    "rollup": "^0.52.1",
-    "tape": "^4.3.0",
-    "typescript": "^2.7.1"
-  }
+    "@babel/core": "^7.15.0",
+    "@babel/node": "^7.14.9",
+    "@babel/preset-env": "^7.8.7",
+    "@babel/preset-typescript": "^7.13.0",
+    "@pika/pack": "^0.5.0",
+    "@types/jest": "27.x",
+    "babel-jest": "27.x",
+    "coveralls": "^2.13.1",
+    "jest": "27.x",
+    "lint-staged": "^7.2.0",
+    "np": "7.x",
+    "pika-plugin-build-web-babel": "^0.10.0",
+    "pika-plugin-ts-types": "0.1.x",
+    "pre-commit": "^1.2.2",
+    "prettier": "^1.11.1",
+    "ts-node": "^10.8.1",
+    "typescript": "^4.3.2"
+  },
+  "types": "dist-types/index.d.ts",
+  "main": "dist-node/index.js",
+  "module": "dist-web/index.js"
 }
